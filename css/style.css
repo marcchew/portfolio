@@ -1,0 +1,252 @@
+body {
+  display: grid;
+  grid-template-columns: auto;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #474747;
+}
+
+main {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+main > div {
+  min-height: 100vh;
+}
+
+a:hover {
+  outline: none;
+  color: inherit;
+  text-decoration: none !important;
+}
+
+/* animation */
+.blink {
+  animation: blinking 1.2s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    color: grey;
+  }
+  49% {
+    color: grey;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: grey;
+  }
+}
+/* ----------------- */
+/* common */
+.hover {
+  transition: all 0.3s ease;
+}
+
+.hover:hover {
+  margin-top: -4rem;
+  margin-bottom: 5rem !important;
+}
+
+.img-cutoff {
+  max-height: 14rem;
+  overflow-y: hidden;
+}
+
+/* ----------------- */
+#toggle-menu {
+  cursor: pointer;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  right: -14rem;
+}
+
+.sidebar-wrapper {
+  margin-left: -100%;
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 15rem;
+  z-index: 1;
+}
+
+.sidebar {
+  background-color: whitesmoke;
+  border-right: thin solid lightgray;
+  opacity: 0;
+}
+
+.sidebar:hover #quick-actions {
+  opacity: 1;
+}
+
+.sidebar-container {
+  opacity: 0;
+}
+
+#close {
+  display: none;
+}
+
+.sidebar-show {
+  margin-left: 0;
+}
+
+.sidebar-show > .sidebar {
+  opacity: 1;
+}
+
+.sidebar-show > #toggle-menu {
+  right: -5rem;
+}
+
+#sidebar-title {
+  cursor: pointer;
+}
+
+#sidebar-title > a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+#quick-actions {
+  transition: all 0.3s ease;
+  opacity: 0;
+  color: #666666;
+}
+
+#quick-actions > a {
+  color: #666666;
+  transition: all 0.3s ease;
+}
+
+#quick-actions > a:hover {
+  color: #999999;
+}
+
+#nav-sidebar a {
+  color: #666666;
+}
+
+#nav-sidebar a:hover {
+  transition: all 0.3s ease;
+  border-left: thick solid grey;
+  background-color: rgba(160, 160, 160, 0.1);
+}
+
+#intro-title {
+  word-break: break-word;
+}
+
+#about-content {
+  font-size: larger;
+  width: auto;
+}
+
+#projects-container {
+  display: grid;
+}
+
+.job-card {
+  padding: 2rem;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  width: auto;
+}
+
+.job-card:hover {
+  box-shadow: 0rem 0rem 0.5rem grey;
+}
+
+.skills-image {
+  max-height: 12rem;
+}
+
+.social-icons {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-icons:hover {
+  margin-top: -1rem;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.social-icons > svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.social-icons > label {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.social-icons:hover > label {
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    grid-template-columns: 1fr 4fr;
+  }
+
+  #toggle-menu {
+    display: none;
+  }
+
+  .sidebar-wrapper {
+    margin-left: 0;
+    display: block;
+    position: inherit;
+  }
+
+  .sidebar {
+    opacity: 1;
+  }
+
+  #intro-title {
+    word-break: default;
+  }
+
+  #about-content {
+    width: 70%;
+  }
+
+  .job-card {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #about-content {
+    width: 50%;
+  }
+
+  #projects-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .card-projects {
+    width: 25rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+{"mode":"full","isActive":false}
